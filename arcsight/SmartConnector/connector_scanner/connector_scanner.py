@@ -89,7 +89,7 @@ with open("config.csv") as config_file:
                         logger.debug(out)
                         
                     else:
-                        out="host:port - Unknown State".format(host,port)
+                        out="{}:{} - Unknown State".format(host,port)
                         logger.info(out)                        
   
                 except requests.exceptions.RequestException as e:                    
