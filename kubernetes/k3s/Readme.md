@@ -23,3 +23,19 @@ as per: https://wiki.archlinux.org/title/Kubernetes#Pods_cannot_communicate_when
 ```
 kubectl config view --raw > ~/.kube/config
 ```
+
+
+### cconecting to dashboard
+- create token
+```
+ sudo k3s kubectl -n kubernetes-dashboard create token admin-user
+```
+- run proxy??
+```
+sudo k3s kubectl proxy 
+```
+- forward
+```
+kubectl -n kubernetes-dashboard port-forward  kubernetes-dashboard-POD__ID  8443:8443
+```
+- connect using https
